@@ -1,0 +1,29 @@
+@function primary($shade: 100, $opacity: 1) {
+	@if ($shade == 40) {
+		@return rgba(0, 120, 205, $opacity);
+	} @else if ($shade == 60) {
+		@return rgba(0, 82, 140, $opacity);
+	} @else if ($shade == 80) {
+		@return rgba(0, 42, 72, $opacity);
+	} @else {
+		@return rgba(52, 89, 1, $opacity);
+	}
+}
+
+@function natural($shade: 100, $opacity: 1) {
+	@if ($shade == 0) {
+		@return rgba(253, 253, 253, $opacity);
+	} @else if ($shade == 10) {
+		@return rgba(235, 238, 239, $opacity);
+	} @else if ($shade == 20) {
+		@return rgba(204, 209, 210, $opacity);
+	} @else if ($shade == 40) {
+		@return rgba(153, 162, 165, $opacity);
+	} @else if ($shade == 60) {
+		@return rgba(102, 116, 121, $opacity);
+	} @else if ($shade == 80) {
+		@return rgba(36, 43, 51, $opacity);
+	} @else {
+		@return rgba(0, 23, 31, $opacity);
+	}
+}
