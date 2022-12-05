@@ -1,0 +1,63 @@
+@use '../../scss/base/breakpoints' as media;
+@use '../../scss/base/colors' as colors;
+@use '../../scss/base/fonts' as font;
+
+.btn {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin: 1rem;
+  border: 1.5px solid colors.primary();
+  border-radius: 3rem;
+  padding: 1rem 5rem;
+  color: colors.primary(); 
+  background-color: colors.natural(-1);
+  transition: all 300ms ease;
+  
+  &:hover {
+    border-color: colors.primary(40);
+    color: colors.primary(40); 
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  &.btn--circle {
+    border-radius: 50%;
+    padding: 1rem;
+  }
+
+  &.btn--primary {
+    border: none;
+    color: colors.natural(); 
+    background-color: colors.primary();
+  }
+
+  &.btn--primary-40 {
+    border: none;
+    color: colors.natural();
+    background-color: colors.primary(40);
+  }
+
+  &.btn--primary-60 {
+    border: none;
+    color: colors.natural();
+    background-color: colors.primary(60);
+  }
+
+  &.btn--primary-80 {
+    border: none;
+    color: colors.natural();
+    background-color: colors.primary(80);
+  }
+
+  &.btn--disabled {
+    border: none;
+    color: colors.natural(60);
+    background-color: colors.natural(20);
+
+    &:hover {
+      cursor: not-allowed;
+      text-decoration: none;
+    }
+  }
+}

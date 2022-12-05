@@ -1,1 +1,11 @@
-@use 'base';
+@use 'reset';
+
+@use 'base/breakpoints' as media ;
+@use 'base/colors' as colors;
+@use 'base/fonts' as font;
+
+html {
+  @include font.body(2);
+  font-family: font.family();
+  color: colors.natural(100);
+}

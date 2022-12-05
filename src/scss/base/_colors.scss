@@ -6,11 +6,35 @@
 	} @else if ($shade == 80) {
 		@return rgba(0, 42, 72, $opacity);
 	} @else {
-		@return rgba(52, 89, 1, $opacity);
+		@return rgba(0, 52, 89, $opacity);
 	}
 }
 
-@function natural($shade: 100, $opacity: 1) {
+@function secundary($shade: 0, $opacity: 1) {
+	@if ($shade == 40) {
+		@return rgba(252, 238, 213, $opacity);
+	} @else if ($shade == 60) {
+		@return rgba(241, 208, 146, $opacity);
+	} @else if ($shade == 80) {
+		@return rgba(238, 199, 126, $opacity);
+	} @else {
+		@return rgba(247, 219, 167, $opacity);
+	}
+}
+
+@function state($state: '', $opacity: 1) {
+	@if ($shade == 'orange') {
+		@return rgba(255, 145, 44, $opacity);
+	} @else if ($shade == 'red') {
+		@return rgba(255, 86, 79, $opacity);
+	} @else if ($shade == 'green') {
+		@return rgba(52, 199, 89, $opacity);
+	} @else {
+		@return rgba(0, 167, 231, $opacity);
+	}
+}
+
+@function natural($shade: 0, $opacity: 1) {
 	@if ($shade == 0) {
 		@return rgba(253, 253, 253, $opacity);
 	} @else if ($shade == 10) {
@@ -23,7 +47,9 @@
 		@return rgba(102, 116, 121, $opacity);
 	} @else if ($shade == 80) {
 		@return rgba(36, 43, 51, $opacity);
-	} @else {
+	} @else if ($shade == 100) {
 		@return rgba(0, 23, 31, $opacity);
+	} @else {
+		@return transparent;
 	}
 }
