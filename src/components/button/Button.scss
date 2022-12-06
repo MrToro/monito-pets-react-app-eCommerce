@@ -10,7 +10,8 @@
   border: 1.5px solid colors.primary();
   border-radius: 3rem;
   padding: 1rem 5rem;
-  color: colors.primary(); 
+  @include font.body(5);
+  color: colors.primary();
   background-color: colors.natural(-1);
   transition: all 300ms ease;
   
@@ -18,12 +19,13 @@
     border-color: colors.primary(40);
     color: colors.primary(40); 
     text-decoration: underline;
+    filter: drop-shadow(0.25rem 0.25rem 0.5rem colors.natural(100, 0.8));
     cursor: pointer;
   }
 
   &.btn--circle {
     border-radius: 50%;
-    padding: 1rem;
+    padding: 1.5rem;
   }
 
   &.btn--primary {
