@@ -1,6 +1,6 @@
 import './Heading.scss';
 
-const Heading = ({ className = '', level = 4, weight = 'regular', children }: IHeadingProps) => {
+const Heading = ({ level = 4, weight = 'regular', className = '', children }: IHeadingProps) => {
 	className = `heading heading--level-${level} heading--weight-${weight} ${className}`;
 
 	switch (level) {
@@ -21,8 +21,8 @@ const Heading = ({ className = '', level = 4, weight = 'regular', children }: IH
 export default Heading;
 
 interface IHeadingProps {
-	className?: string;
 	level?: 1 | 2 | 3 | 4;
-	weight: 'regular' | 'semibold' | 'bold';
+	weight?: 'regular' | 'semibold' | 'bold';
+	className?: string;
 	children: React.ReactNode;
 }

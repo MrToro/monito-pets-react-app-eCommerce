@@ -1,6 +1,6 @@
 import './Button.scss';
 
-function Button({ className, children }: IButtonProps) {
+const Button = ({ className, children }: IButtonProps) => {
 	return (
 		<>
 			<button className={`btn ${className}`} type='button'>
@@ -8,9 +8,10 @@ function Button({ className, children }: IButtonProps) {
 			</button>
 		</>
 	);
-}
+};
 
-export default Button;
+export default Button
+
 
 interface IButtonProps {
 	className?: '' | string;
