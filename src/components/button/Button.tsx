@@ -1,6 +1,6 @@
 import './Button.scss';
 
-function Button({ className = '', children }: IButtonProps) {
+function Button({ className, children }: IButtonProps) {
 	return (
 		<>
 			<button className={`btn ${className}`} type='button'>
@@ -13,6 +13,6 @@ function Button({ className = '', children }: IButtonProps) {
 export default Button;
 
 interface IButtonProps {
-	className?: string;
+	className?: '' | string;
 	children: React.ReactNode;
 }
