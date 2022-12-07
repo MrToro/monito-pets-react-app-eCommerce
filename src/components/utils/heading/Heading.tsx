@@ -22,7 +22,7 @@ export default Heading;
 
 interface IHeadingProps {
 	level?: 1 | 2 | 3 | 4;
-	weight?: 'regular' | 'semibold' | 'bold';
+	weight?: 'regular' | 'medium' | 'bold';
 	className?: string;
 	children: React.ReactNode;
 }

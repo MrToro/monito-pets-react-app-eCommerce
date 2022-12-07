@@ -16,7 +16,7 @@ export default Text
 
 interface ITextProps {
 	type?: 'paragraph' | 'span';
-	weight?: 'regular' | 'semibold' | 'bold';
+	weight?: 'regular' | 'medium' | 'bold';
 	className?: string;
 	children: React.ReactNode;
 }

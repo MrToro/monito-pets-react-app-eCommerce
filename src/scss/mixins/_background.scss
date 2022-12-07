@@ -1,4 +1,6 @@
-@mixin base() {
+@mixin base($color: transparent) {
+  background-color: $color;
+
   @content;
 }
 

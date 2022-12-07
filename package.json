@@ -1,29 +1,29 @@
 {
-  "name": "monito-pets-react-app-ecommerce",
-  "private": true,
-  "version": "0.0.0",
-  "type": "commonjs",
-  "scripts": {
-    "dev": "vite --host --port 3000",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
-  },
-  "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-icons": "^4.7.1"
-  },
-  "devDependencies": {
-    "@types/react": "^18.0.24",
-    "@types/react-dom": "^18.0.8",
-    "@vitejs/plugin-react": "^2.2.0",
-    "gulp": "^4.0.2",
-    "gulp-avif": "^1.1.1",
-    "gulp-image-resize": "^0.13.1",
-    "gulp-imagemin": "^7.1.0",
-    "gulp-webp": "^4.0.1",
-    "sass": "^1.56.1",
-    "typescript": "^4.6.4",
-    "vite": "^3.2.3"
-  }
+	"name": "monito-pets-react-app-ecommerce",
+	"private": true,
+	"version": "0.0.0",
+	"type": "commonjs",
+	"scripts": {
+		"dev": "vite",
+		"build": "tsc && vite build",
+		"preview": "vite preview"
+	},
+	"dependencies": {
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"react-icons": "^4.7.1"
+	},
+	"devDependencies": {
+		"@types/react": "^18.0.24",
+		"@types/react-dom": "^18.0.8",
+		"@vitejs/plugin-react": "^2.2.0",
+		"gulp": "^4.0.2",
+		"gulp-avif": "^1.1.1",
+		"gulp-image-resize": "^0.13.1",
+		"gulp-imagemin": "^7.1.0",
+		"gulp-webp": "^4.0.1",
+		"sass": "^1.56.1",
+		"typescript": "^4.6.4",
+		"vite": "^3.2.3"
+	}
 }

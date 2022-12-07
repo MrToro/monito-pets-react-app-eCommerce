@@ -1,0 +1,14 @@
+@use '../../../scss/mixins/text';
+
+.text {
+  @include text.regular(1.2rem) {
+    line-height: 1.8rem
+  }
+  
+  &--weight-medium {
+    @include text.medium();
+  }
+  &--weight-bold {
+    @include text.bold();
+  }
+}

@@ -22,9 +22,18 @@
   @content;
 }
 
-@mixin model($width: 100%, $height: 100%) {
-  width: $width;
-  height: $height;
-
+@mixin model() {
   @content;
+}
+
+@mixin border($width: 1px, $color: black) {
+  border: $width solid $color;
+  
+  @content;
+}
+
+@mixin hover() {
+  &:hover {
+    @content;
+  }
 }

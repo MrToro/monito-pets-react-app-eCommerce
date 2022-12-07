@@ -1,0 +1,31 @@
+@use '../../../scss/mixins/text';
+
+.heading {
+  &--level-1 {
+    @include text.regular(4.6rem) {
+      line-height: 6rem
+    }
+  }
+  &--level-2 {
+    @include text.regular(3.6rem) {
+      line-height: 5.4rem
+    }
+  }
+  &--level-3 {
+    @include text.regular(2.8rem) {
+      line-height: 3.8rem
+    }
+  }
+  &--level-4 {
+    @include text.regular(2.4rem) {
+      line-height: 3.6rem
+    }
+  }
+
+  &--weight-medium {
+    @include text.medium();
+  }
+  &--weight-bold {
+    @include text.bold();
+  }
+}
