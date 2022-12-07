@@ -1,0 +1,10 @@
+@use '../mixins/text';
+@use '../mixins/color';
+
+body {
+  @include text.regular() {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    color: color.natural(100);
+  }
+}
