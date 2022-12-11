@@ -1,19 +1,12 @@
-import { BsEyeSlash } from 'react-icons/bs';
+import { BsEyeFill, BsEyeSlashFill } from 'react-icons/bs';
 
-const InputFiled = ({ className, placeholder, label, description, hidden }: InputFiledProps) => {
-	className = `text text--input ${className}`;
+import './InputField.scss';
+
+const InputFiled = ({ className = '', placeholder, label, description, hidden }: InputFiledProps) => {
+	className = `inputField ${className}`;
 
 	return (
-		<label>
-			{label && <span>{label}</span>}
-
-			<div>
-				<input className={className} type='text' placeholder={placeholder} />
-				{hidden && <BsEyeSlash />}
-			</div>
-
-			{description && <p>{description}</p>}
-		</label>
+		<input className={className} type='text' placeholder={placeholder} />
 	);
 };
 

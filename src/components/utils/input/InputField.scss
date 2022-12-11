@@ -1,0 +1,15 @@
+@use '../../../scss/mixins/layout';
+@use '../../../scss/mixins/text';
+@use '../../../scss/mixins/color';
+@use '../../../scss/mixins/background';
+
+.inputField[type=text] {
+  @include layout.model() {
+    margin: 1rem;
+    padding: 1.5rem 3rem;
+  }
+  @include layout.border($color: color.natural(40)) {
+    border-radius: 0.8rem;
+  }
+  @include text.medium();
+}
