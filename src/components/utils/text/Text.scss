@@ -5,10 +5,10 @@
     line-height: 1.8rem
   }
   
-  &--weight-medium {
+  &--medium {
     @include text.medium();
   }
-  &--weight-bold {
+  &--bold {
     @include text.bold();
   }
 }

@@ -1,19 +1,19 @@
 import './Button.scss';
 
-const Button = ({ className, children }: IButtonProps) => {
+const Button = ({ className = '', onClick, children }: IButtonProps) => {
 	return (
 		<>
-			<button className={`btn ${className}`} type='button'>
+			<button className={`btn ${className}`} type='button' onClick={onClick}>
 				{children}
 			</button>
 		</>
 	);
 };
 
-export default Button
-
+export default Button;
 
 interface IButtonProps {
-	className?: '' | string;
+	className?: string;
+	onClick?: () => void;
 	children: React.ReactNode;
 }

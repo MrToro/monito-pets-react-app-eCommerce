@@ -1,21 +1,16 @@
 import './Heading.scss';
 
 const Heading = ({ level = 4, weight = 'regular', className = '', children }: IHeadingProps) => {
-	className = `heading heading--level-${level} heading--weight-${weight} ${className}`;
+	className = `heading heading--${weight} heading--level-${level} ${className}`;
 
-	switch (level) {
-		case 1:
-			return <h1 className={className}>{children}</h1>;
-
-		case 2:
-			return <h2 className={className}>{children}</h2>;
-
-		case 3:
-			return <h3 className={className}>{children}</h3>;
-
-		default:
-			return <h4 className={className}>{children}</h4>;
-	}
+	return (
+		<>
+			{(level === 1) && (<h1 className={className}>{children}</h1>)}
+			{(level === 2) && (<h2 className={className}>{children}</h2>)}
+			{(level === 3) && (<h3 className={className}>{children}</h3>)}
+			{(level === 4) && (<h4 className={className}>{children}</h4>)}
+		</>
+	);
 };
 
 export default Heading;

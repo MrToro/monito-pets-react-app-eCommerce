@@ -4,82 +4,78 @@
 @use '../../../scss/mixins/background';
 
 .btn {
-  @include layout.flex() {
-    gap: 1rem;
-  }
-  
-  @include layout.model() {
-    margin: 1rem;
-    padding: 1.5rem 5rem;
-  }
+	@include layout.flex() {
+		gap: 1rem;
+	}
+	@include layout.model() {
+		margin: 1rem;
+		padding: 1.5rem 5rem;
+	}
+	@include layout.border(0.15rem, color.primary()) {
+		border-radius: 6rem;
+	}
+	@include text.medium(1.6rem) {
+		color: color.primary();
+	}
+	@include background.base();
+	@include layout.hover() {
+		cursor: pointer;
+		filter: drop-shadow(0 0 0.5rem color.primary());
+	}
+	transition: all 300ms ease;
 
-  @include layout.border(0.15rem, color.primary()) {
-    border-radius: 6rem;
-  }
+	&--primary {
+		color: color.natural();
+		background-color: color.primary();
 
-  @include text.medium(1.6rem) {
-    color: color.primary();
-  }
-
-  @include background.base();
-
-  @include layout.hover() {
-    cursor: pointer;
-    filter: drop-shadow(0 0 0.5rem color.primary());
-  }
-
-  transition: all 300ms ease;
-
-  &--primary {
-    color: color.natural();
-    background-color: color.primary();
-
-    @include layout.hover() {
+    &:hover {
       filter: drop-shadow(0 0 0.5rem color.primary());
     }
 
-    &-80 {
-      color: color.natural();
-      background-color: color.primary(80);
-      border-color: color.primary(80);
+		&-80 {
+			color: color.natural();
+			background-color: color.primary(80);
+			border-color: color.primary(80);
 
-      @include layout.hover() {
+      &:hover {
         filter: drop-shadow(0 0 0.5rem color.primary(80));
       }
-    }
-    &-60 {
-      color: color.natural();
-      background-color: color.primary(60);
-      border-color: color.primary(60);
+		}
 
-      @include layout.hover() {
+		&-60 {
+			color: color.natural();
+			background-color: color.primary(60);
+			border-color: color.primary(60);
+
+      &:hover {
         filter: drop-shadow(0 0 0.5rem color.primary(60));
       }
-    }
-    &-40 {
-      color: color.natural();
-      background-color: color.primary(40);
-      border-color: color.primary(40);
+		}
 
-      @include layout.hover() {
+		&-40 {
+			color: color.natural();
+			background-color: color.primary(40);
+			border-color: color.primary(40);
+
+      &:hover {
         filter: drop-shadow(0 0 0.5rem color.primary(40));
       }
-    }
-  }
+		}
+	}
 
-  &--disabled {
-    color: color.natural(60);
-    background-color: color.natural(20);
-    border-color: color.natural(20);
+	&--disabled {
+		color: color.natural(60);
+		background-color: color.natural(20);
+		border-color: color.natural(20);
 
-    @include layout.hover() {
+    &:hover {
       cursor: not-allowed;
       filter: drop-shadow(0 0 0.5rem transparent);
     }
-  }
+	}
 
-  &--circle {
-    padding: 1rem;
-    border-radius: 50%;
-  }
+	&--circle {
+		padding: 1rem;
+		border-radius: 50%;
+	}
 }
