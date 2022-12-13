@@ -1,12 +1,10 @@
-import './Text.scss';
-
 const Text = ({ type = 'paragraph', weight = 'regular', className = '', children }: ITextProps) => {
 	className = `text text--${weight} ${className}`;
 
 	return (
 		<>
-			{(type === 'paragraph') && (<p className={className}>{children}</p>)}
-			{(type === 'span') && (<span className={className}>{children}</span>)}
+			{type === 'paragraph' && <p className={className}>{children}</p>}
+			{type === 'span' && <span className={className}>{children}</span>}
 		</>
 	);
 };

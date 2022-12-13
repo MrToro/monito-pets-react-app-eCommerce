@@ -1,13 +1,21 @@
+import InputPassword from './InputPassword';
+import InputText from './InputText';
 
-const Input = ({}: IInputProps) => {
+const Input = ({ type = 'text', placeholder, className = '' }: IInputProps) => {
+	className = `input__container ${className}`;
+
 	return (
-    <label className="label">
-      
-    </label>
-  );
+		<label className={className}>
+			{type === 'text' && <InputText placeholder={placeholder} />}
+			{type === 'password' && <InputPassword placeholder={placeholder} />}
+		</label>
+	);
 };
 
-export default Input
+export default Input;
 
 interface IInputProps {
+	type: 'text' | 'password';
+	placeholder: string;
+	className?: string;
 }

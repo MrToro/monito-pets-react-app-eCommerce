@@ -1,5 +1,3 @@
-import './Button.scss';
-
 const Button = ({ className = '', onClick, children }: IButtonProps) => {
 	return (
 		<>
